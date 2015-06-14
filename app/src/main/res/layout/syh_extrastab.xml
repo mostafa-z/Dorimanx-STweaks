@@ -1,0 +1,36 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    		  android:id="@+id/SyhExtrasTabLayout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center">
+              
+        <TextView
+            android:id="@+id/textViewDevInfo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+			android:layout_marginTop="20dp"
+            android:text="@string/developer_info"
+            android:textColor="@color/green"
+			android:textStyle="bold"
+            android:gravity="center"/>
+
+          <TextView
+        android:id="@+id/textViewAppVersion"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:textColor="@color/green"
+        android:gravity="center"/>
+        
+        <TextView
+        android:id="@+id/textViewKernelVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_light"
+        android:paddingTop="10dip"
+        android:paddingStart="@dimen/size_medium"
+        android:paddingEnd="@dimen/size_medium"
+        android:layout_margin="10dp"/>
+                      	
+</LinearLayout>

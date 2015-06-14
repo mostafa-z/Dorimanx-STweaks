@@ -1,0 +1,10 @@
+
+<SeekBar  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/SyhSeekBar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingStart="40dp"
+		android:paddingTop="10.0dip"
+		android:paddingBottom="5.0dip"
+		android:paddingEnd="40dp" />
+    

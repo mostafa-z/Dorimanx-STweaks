@@ -1,0 +1,120 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    		  android:id="@+id/ProfileChooserLayout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center">
+
+    <Button
+        android:id="@+id/profilecheck"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/profile_check"
+        android:onClick="profileCheck" />
+
+    <Button
+        android:id="@+id/extremeperformance"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/extreme_performance"
+        android:onClick="extremePerformance"/>
+
+    <Button
+        android:id="@+id/performance"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/performance"
+        android:onClick="performance" />
+
+    <Button
+        android:id="@+id/defaultprofile"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/default_profile"
+        android:onClick="defaultProfile" />
+
+    <Button
+        android:id="@+id/battery"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/battery"
+        android:onClick="battery" />
+
+    <Button
+        android:id="@+id/extremebattery"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/extreme_battery"
+        android:onClick="extremeBattery" />
+		
+	<Button
+        android:id="@+id/backup"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/backup_profile"
+        android:onClick="backup" />
+		
+	<Button
+        android:id="@+id/restore"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/restore_profile"
+        android:onClick="restore" />
+</LinearLayout>
