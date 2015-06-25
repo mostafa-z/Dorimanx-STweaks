@@ -351,19 +351,19 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			kernelSupportOk = isKernelSupportOk();
 			if (!kernelSupportOk /* && !testingWithNoKernelSupport */ )
 			{
-				startTextView.setText(R.string.startmenu_nokernelsupport);
+				// startTextView.setText(R.string.startmenu_nokernelsupport);
 				Utils.reset();
 			}
 			else
 			{
 				new LoadDynamicUI().execute();
-				startTextView.setText(getString(R.string.loading));
+				dialog = ProgressDialog.show(this, null, getResources().getText(R.string.loading), true);
 			}
 		}
 		else
 		{
 			kernelSupportOk = false;
-			startTextView.setText(R.string.startmenu_no_root);
+			// startTextView.setText(R.string.startmenu_no_root);
 			Utils.reset();
 		}
     	
