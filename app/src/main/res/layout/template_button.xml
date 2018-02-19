@@ -1,12 +1,11 @@
-
 <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/SyhButton"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+	android:id="@+id/SyhButton"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="@dimen/size_small"
+	android:layout_marginEnd="@dimen/size_large"
 	android:layout_marginStart="@dimen/size_large"
-    android:layout_marginEnd="@dimen/size_large"
 	android:layout_marginTop="@dimen/size_small"
-    android:layout_marginBottom="@dimen/size_small"
 	android:textAppearance="?android:textAppearanceSmall" />
 
         <!-- 

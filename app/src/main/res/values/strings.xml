@@ -1,34 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <string name="app_name">Dorimanx STweaks</string>
-    <string name="menu_about">About</string>
-    <string name="title_activity_main">Dorimanx</string>
-    <string name="bottom_accept">Apply</string>
-    <string name="bottom_decline">Discard</string>
-    <string name="startmenu_initial" />
+	<string name="app_name">Gabriel STweaks</string>
+	<string name="menu_about">About</string>
+	<string name="bottom_accept">Apply</string>
+	<string name="bottom_decline">Discard</string>
+	<string name="startmenu_initial" />
 	<string name="startmenu_nokernelsupport">Sorry, no kernel support!</string>
 	<string name="startmenu_no_root">No root access, or timeout!</string>
 	<string name="loading">Loading! Please wait...</string>
-	<string name="dorimanx_ota">DorimanX OTA</string>
-	<string name="dorimanx_ota_pro">DorimanX OTA PRO</string>
-    <string name="reset_settings">Reset to Default</string>
-    <string name="developer_info" tools:ignore="TypographyDashes">Developed by Gokhan Moral \nUpdated by krija</string>
-    <string name="kernel_thread">Kernel Thread</string>
-    <string name="donation">Donate to dorimanx</string>
-	<string name="kernel_bug">Bug report for Kernel</string>
-    <string name="app_bug">Bug report for App</string>
-    <string name="logging">Collecting logs for 30 seconds, please wait until STweaks will close</string>
-    <string name="wait">Loading profile, wait until STweaks exit and restart by itself</string>
-	<string name="log_done">All Data collected and ready at /sdcard/dorimanx_debug.zip</string>
-    <string name="select_profile">Profiles</string>
-    <string name="profile_check">Check Profile</string>
-    <string name="extreme_performance">Extreme Performance</string>
-    <string name="performance">Performance Profile</string>
-    <string name="default_profile">Default Profile</string>
-    <string name="backup_profile">Backup Profile</string>
+	<string name="developer_info" tools:ignore="TypographyDashes">Developed by Gokhan Moral \nUpdated by krija \nmostafa-z 2018</string>
+	<string name="logging">Collecting logs for 30 seconds, please wait until STweaks will close</string>
+	<string name="wait">Loading profile, wait until STweaks exit and restart by itself</string>
+	<string name="log_done">All Data collected and ready at /sdcard/gabriel_debug.zip</string>
+	<string name="select_profile">Profiles</string>
+	<string name="profile_check">Check Profile</string>
+	<string name="extreme_performance">Extreme Performance</string>
+	<string name="performance">Performance Profile</string>
+	<string name="default_profile">Default Profile</string>
+	<string name="backup_profile">Backup Profile</string>
 	<string name="backup">Backup your current settings</string>
 	<string name="restore_profile">Restore Saved Profile</string>
 	<string name="battery">Battery Profile</string>
-    <string name="extreme_battery">Extreme Battery Profile</string>
+	<string name="extreme_battery">Extreme Battery Profile</string>
 
 </resources>

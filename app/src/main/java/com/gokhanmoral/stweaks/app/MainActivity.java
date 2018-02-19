@@ -441,15 +441,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         final Context mContext = this;
         switch (item.getItemId()) {
 
-            case R.id.menu_donation: {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://forum.xda-developers.com/donatetome.php?u=2376110"));
-                startActivity(intent);
-            }
-            return true;
-
             case R.id.select_profile: {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
                 View v = LayoutInflater.from(mContext).inflate(R.layout.profile_chooser, mViewPager, false);
@@ -462,15 +453,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                         })
                         .create()
                         .show();
-            }
-            return true;
-
-            case R.id.menu_kernel_thread: {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://forum.xda-developers.com/showpost.php?p=60586770&postcount=1"));
-                startActivity(intent);
             }
             return true;
 
@@ -509,104 +491,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 .create()
                 .show();
 
-            }
-            return true;
-			case R.id.menu_dorimanx_ota: {
-                final Intent[] intent = {getPackageManager().getLaunchIntentForPackage("com.diechel.xda.dorimanxota")};
-                if (intent[0] != null) {
-    /* We found the activity now start the activity */
-                    intent[0].addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent[0]);
-                } else {
-    /* Implement prompt dialog asking user to download the package */
-                    AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-                    builder.setMessage("Not installed. Do you want to install the app from Google Play?")
-                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // Handle Yes
-                                    intent[0] = new Intent(Intent.ACTION_VIEW);
-                                    intent[0].addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                    intent[0].setData(Uri.parse("market://details?id=" + "com.diechel.xda.dorimanxota"));
-                                    startActivity(intent[0]);
-                                }
-                            })
-                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // Handle Cancel
-                                }
-                            })
-                            .create()
-                            .show();
-                }
-			}
-            return true;
-			case R.id.menu_dorimanx_ota_pro: {
-                final Intent[] intent = {getPackageManager().getLaunchIntentForPackage("com.diechel.xda.dorimanxota.pro")};
-                if (intent[0] != null) {
-    /* We found the activity now start the activity */
-                    intent[0].addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent[0]);
-                } else {
-    /* Implement prompt dialog asking user to download the package */
-                    AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-                    builder.setMessage("Not installed. Do you want to buy/install the app from Google Play?")
-                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // Handle Yes
-                                    intent[0] = new Intent(Intent.ACTION_VIEW);
-                                    intent[0].addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                    intent[0].setData(Uri.parse("market://details?id=" + "com.diechel.xda.dorimanxota.pro"));
-                                    startActivity(intent[0]);
-                                }
-                            })
-                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // Handle Cancel
-                                }
-                            })
-                            .create()
-                            .show();
-                }
-			}
-            return true;
-			case R.id.menu_kernel_bug: {
-                Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/debug_to_sd + 1");
-                Toast toast = Toast.makeText(mContext, R.string.log_done, Toast.LENGTH_LONG);
-                toast.show();
-               }
-            return true;
-            case R.id.menu_app_bug: {
-                Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/debug_to_sd + 2");
-                Toast toast = Toast.makeText(mContext, R.string.logging, Toast.LENGTH_LONG);
-                toast.show();
-                Timer timer = new Timer();
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        System.exit(0);
-                    }
-
-                }, 31000);
-            }
-            return true;
-			case R.id.menu_reset: {
-                AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-                builder.setMessage("All settings will be reset. You will have to relaunch the application.")
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                // Handle Ok
-								Utils.executeRootCommandInThread("/res/uci.sh delete default");
-                                Utils.executeRootCommandInThread("/res/uci.sh select default");
-                                System.exit(0);
-                            }
-                        })
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                // Handle Cancel
-                            }
-                        })
-                        .create()
-                        .show();
             }
             return true;
             default:
@@ -883,7 +767,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     }
 
     public void profileCheck(View view) {
-        Toast toast = Toast.makeText(getApplicationContext(),"Your profile is: " +Utils.executeRootCommandInThread("cat /data/.dori/.active.profile"), Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getApplicationContext(),"Your profile is: " +Utils.executeRootCommandInThread("cat /data/.gabriel/.active.profile"), Toast.LENGTH_SHORT);
         toast.show();
     }
 	
