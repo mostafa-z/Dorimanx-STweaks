@@ -20,6 +20,8 @@
         android:text="@string/profile_check"
         android:onClick="profileCheck" />
 
+    <View style="@style/Divider"/>
+
     <Button
         android:id="@+id/extremeperformance"
         android:layout_gravity="center_horizontal"
@@ -33,6 +35,8 @@
         android:paddingEnd="@dimen/size_large"
         android:text="@string/extreme_performance"
         android:onClick="extremePerformance"/>
+
+    <View style="@style/Divider"/>
 
     <Button
         android:id="@+id/performance"
@@ -48,6 +52,8 @@
         android:text="@string/performance"
         android:onClick="performance" />
 
+    <View style="@style/Divider"/>
+
     <Button
         android:id="@+id/defaultprofile"
         android:layout_gravity="center_horizontal"
@@ -61,6 +67,8 @@
         android:paddingEnd="@dimen/size_large"
         android:text="@string/default_profile"
         android:onClick="defaultProfile" />
+
+    <View style="@style/Divider"/>
 
     <Button
         android:id="@+id/battery"
@@ -76,6 +84,8 @@
         android:text="@string/battery"
         android:onClick="battery" />
 
+    <View style="@style/Divider"/>
+
     <Button
         android:id="@+id/extremebattery"
         android:layout_gravity="center_horizontal"
@@ -89,7 +99,9 @@
         android:paddingEnd="@dimen/size_large"
         android:text="@string/extreme_battery"
         android:onClick="extremeBattery" />
-		
+
+    <View style="@style/Divider"/>
+
 	<Button
         android:id="@+id/backup"
         android:layout_gravity="center_horizontal"
@@ -103,7 +115,9 @@
         android:paddingEnd="@dimen/size_large"
         android:text="@string/backup_profile"
         android:onClick="backup" />
-		
+
+    <View style="@style/Divider"/>
+
 	<Button
         android:id="@+id/restore"
         android:layout_gravity="center_horizontal"
@@ -117,4 +131,6 @@
         android:paddingEnd="@dimen/size_large"
         android:text="@string/restore_profile"
         android:onClick="restore" />
+
+    <View style="@style/Divider"/>
 </LinearLayout>
