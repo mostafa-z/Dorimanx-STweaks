@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -34,13 +35,16 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+
 
 //TODO: check for updates (almost ready)
 //TODO: flash kernel/zip
@@ -468,18 +472,42 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 }
 
                 final TextView tv2 = (TextView) v.findViewById(R.id.textViewKernelVersion);
-                tv2.setText("Kernel version: " + System.getProperty("os.version"));
+                try {
+                    Process process = Runtime.getRuntime().exec("cat /proc/version");
+                    BufferedReader bufferedReader = new BufferedReader(
+                        new InputStreamReader(process.getInputStream()));
+
+                    StringBuilder result=new StringBuilder();
+                    String line = "";
+                    while ((line = bufferedReader.readLine()) != null) {
+                        result.append(line);
+                    }
+                    tv2.setText(result.toString());
+                }
+                catch (IOException e) {}
 
                 String s = "";
-                s += "\n Kernel Version: " + System.getProperty("os.version");
-                s += "\n ROM Version: " + android.os.Build.VERSION.INCREMENTAL;
-                s += "\n ROM API Level: " + android.os.Build.VERSION.SDK_INT;
-                s += "\n ROM Codename: " + android.os.Build.VERSION.CODENAME;
-                s += "\n ROM Release Version: " + android.os.Build.VERSION.RELEASE;
-                s += "\n Hardware Serial: " + android.os.Build.SERIAL;
-                s += "\n Radio Version: " + android.os.Build.getRadioVersion();
-                s += "\n Device: " + android.os.Build.DEVICE;
-                s += "\n Model (and Product): " + android.os.Build.MODEL + " (" + android.os.Build.PRODUCT + ")";
+                s += "Kernel Version: " + tv2.getText();
+                s += "\n";
+                s += "\nOS Version: " + android.os.Build.VERSION.RELEASE + " ("
+                        + android.os.Build.VERSION.INCREMENTAL + ")";
+                s += "\nROM API Level: " + android.os.Build.VERSION.SDK_INT;
+                s += "\nROM Codename: " + android.os.Build.VERSION.CODENAME;
+                s += "\nROM Build Type: " + android.os.Build.TYPE;
+                s += "\n";
+                // http://developer.android.com/reference/android/os/Build.html :
+                s += "\nManufacturer: " + android.os.Build.MANUFACTURER;
+                s += "\nDevice: " + android.os.Build.DEVICE;
+                s += "\nModel (and Product): " + android.os.Build.MODEL + " (" + android.os.Build.PRODUCT + ")";
+                s += "\nRadio Version: " + android.os.Build.getRadioVersion();
+                s += "\nHardware Serial: " + android.os.Build.SERIAL;
+                s += "\n";
+                s += "\nScreen Heigth: "
+                        + getWindow().getWindowManager().getDefaultDisplay()
+                        .getHeight();
+                s += "\nScreen Width: "
+                        + getWindow().getWindowManager().getDefaultDisplay()
+                        .getWidth();
                 tv2.setText(s);
                 builder.setView(v)
 
