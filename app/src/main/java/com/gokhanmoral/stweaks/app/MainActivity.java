@@ -771,25 +771,25 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     }
 
     public void performance(View view) {
-        Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 5");
+        Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 6");
         Toast toast = Toast.makeText(getApplicationContext(), R.string.wait, Toast.LENGTH_LONG);
         toast.show();
     }
 
     public void defaultProfile(View view) {
-        Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 4");
+        Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 5");
         Toast toast = Toast.makeText(getApplicationContext(), R.string.wait, Toast.LENGTH_LONG);
         toast.show();
     }
 
     public void battery(View view) {
-        Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 3");
+        Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 4");
         Toast toast = Toast.makeText(getApplicationContext(), R.string.wait, Toast.LENGTH_LONG);
         toast.show();
     }
 
     public void extremeBattery(View view) {
-        Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 6");
+        Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 3");
         Toast toast = Toast.makeText(getApplicationContext(), R.string.wait, Toast.LENGTH_LONG);
         toast.show();
     }
