@@ -102,6 +102,38 @@
 
     <View style="@style/Divider"/>
 
+    <Button
+        android:id="@+id/gabriel"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/gabriel"
+        android:onClick="gabriel" />
+
+    <View style="@style/Divider"/>
+
+    <Button
+        android:id="@+id/salvation"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="fill_vertical"
+        android:paddingStart="@dimen/size_large"
+        android:paddingEnd="@dimen/size_large"
+        android:text="@string/salvation"
+        android:onClick="salvation" />
+
+    <View style="@style/Divider"/>
+
 	<Button
         android:id="@+id/backup"
         android:layout_gravity="center_horizontal"

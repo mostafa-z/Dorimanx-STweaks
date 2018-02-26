@@ -22,5 +22,7 @@
 	<string name="restore_profile">Restore Saved Profile</string>
 	<string name="battery">Battery Profile</string>
 	<string name="extreme_battery">Extreme Battery Profile</string>
+	<string name="gabriel">Gabriel Profile</string>
+	<string name="salvation">Salvation Profile</string>
 
 </resources>

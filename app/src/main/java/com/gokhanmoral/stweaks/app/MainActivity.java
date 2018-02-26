@@ -764,6 +764,18 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		}		
 	}
 
+	public void salvation(View view) {
+		Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 9");
+		Toast toast = Toast.makeText(getApplicationContext(), R.string.wait, Toast.LENGTH_LONG);
+		toast.show();
+	}
+
+	public void gabriel(View view) {
+		Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 8");
+		Toast toast = Toast.makeText(getApplicationContext(), R.string.wait, Toast.LENGTH_LONG);
+		toast.show();
+	}
+
     public void extremePerformance(View view) {
         Utils.executeRootCommandInThread("/res/customconfig/actions/push-actions/config_backup_restore + 7");
         Toast toast = Toast.makeText(getApplicationContext(), R.string.wait, Toast.LENGTH_LONG);
