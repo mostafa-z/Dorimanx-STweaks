@@ -4,7 +4,7 @@
 		android:icon="@drawable/ic_about"
 		android:showAsAction="ifRoom"
 		android:title="@string/menu_about" />
-    <item android:id="@+id/select_profile"
+    //item android:id="@+id/select_profile"
         android:title="@string/select_profile"
         android:icon="@drawable/ic_select_profile"
         android:showAsAction="ifRoom" />

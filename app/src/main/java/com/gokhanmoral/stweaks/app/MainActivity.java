@@ -445,7 +445,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         final Context mContext = this;
         switch (item.getItemId()) {
 
-            case R.id.select_profile: {
+/*            case R.id.select_profile: {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
                 View v = LayoutInflater.from(mContext).inflate(R.layout.profile_chooser, mViewPager, false);
                 builder.setView(v)
@@ -458,7 +458,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                         .create()
                         .show();
             }
-            return true;
+            return true;*/
 
             case R.id.menu_about: {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
